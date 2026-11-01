@@ -1,311 +1,522 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="A‑Plus Air Conditioning provides fast, reliable HVAC repair, installation, and maintenance in Austin, TX. Same‑day service, licensed technicians, and upfront pricing. Call (512) 456‑7890.">
-  <title>A‑Plus Air Conditioning – Austin TX HVAC Services</title>
-  <style>
-    :root{
-      --bg:#ffffff;
-      --surface:#f8fafc;
-      --text:#1e293b;
-      --accent:#2563eb;
-    }
-    *{margin:0;padding:0;box-sizing:border-box;}
-    body{
-      font-family:system-ui,Arial,sans-serif;
-      background:var(--bg);
-      color:var(--text);
-      line-height:1.5;
-    }
-    a{color:var(--accent);text-decoration:none;}
-    a:hover{text-decoration:underline;}
-    .skip-link{
-      position:absolute;
-      left:-999px;
-      top:0;
-      background:#000;
-      color:#fff;
-      padding:8px 12px;
-      z-index:100;
-    }
-    .skip-link:focus{
-      left:10px;
-    }
-    nav{
-      display:flex;
-      justify-content:center;
-      gap:2rem;
-      background:var(--surface);
-      padding:1rem;
-      position:sticky;
-      top:0;
-      z-index:10;
-      box-shadow:0 2px 4px rgba(0,0,0,0.05);
-    }
-    nav a{
-      font-weight:600;
-    }
-    header{
-      background:var(--surface);
-      padding:0.5rem 1rem;
-      text-align:center;
-      position:sticky;
-      top:0;
-      z-index:9;
-      border-bottom:1px solid #e2e8f0;
-    }
-    header .phone{
-      font-size:1.1rem;
-      font-weight:600;
-    }
-    main{
-      max-width:1200px;
-      margin:auto;
-      padding:1rem;
-    }
-    section{
-      margin:3rem 0;
-    }
-    .hero{
-      text-align:center;
-      padding:4rem 1rem;
-      background:var(--surface);
-    }
-    .hero h1{
-      font-size:2.5rem;
-      margin-bottom:.5rem;
-    }
-    .hero p{
-      font-size:1.125rem;
-      margin-bottom:1.5rem;
-      color:#475569;
-    }
-    .btn{
-      display:inline-block;
-      background:var(--accent);
-      color:#fff;
-      padding:.75rem 1.5rem;
-      border:none;
-      border-radius:4px;
-      font-size:1rem;
-      cursor:pointer;
-      transition:background .3s,transform .2s;
-    }
-    .btn:hover{
-      background:#1d4ed8;
-      transform:scale(1.03);
-    }
-    .trust{
-      display:flex;
-      flex-wrap:wrap;
-      justify-content:center;
-      gap:2rem;
-      text-align:center;
-      font-size:1rem;
-    }
-    .trust div{
-      display:flex;
-      align-items:center;
-      gap:.5rem;
-    }
-    .services{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:1.5rem;
-    }
-    .service-card{
-      background:var(--surface);
-      padding:1.5rem;
-      border-radius:8px;
-      text-align:center;
-      transition:transform .3s,box-shadow .3s;
-    }
-    .service-card:hover{
-      transform:translateY(-4px);
-      box-shadow:0 8px 16px rgba(0,0,0,0.1);
-    }
-    .highlights{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-      gap:1rem;
-      text-align:center;
-    }
-    .highlight{
-      background:var(--surface);
-      padding:1rem;
-      border-radius:6px;
-    }
-    .why{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:1.5rem;
-    }
-    .why-item{
-      display:flex;
-      align-items:flex-start;
-      gap:.75rem;
-    }
-    .why-item svg{
-      flex-shrink:0;
-      width:24px;
-      height:24px;
-      fill:var(--accent);
-    }
-    .contact{
-      background:var(--surface);
-      padding:2rem;
-      border-radius:8px;
-    }
-    .contact h2{
-      margin-bottom:1rem;
-      text-align:center;
-    }
-    .contact form{
-      display:grid;
-      gap:1rem;
-    }
-    .contact input,
-    .contact textarea{
-      width:100%;
-      padding:.75rem;
-      border:1px solid #cbd5e1;
-      border-radius:4px;
-      font-size:1rem;
-    }
-    .contact button{
-      width:max-content;
-      margin:auto;
-    }
-    .emergency{
-      text-align:center;
-      background:#fee2e2;
-      color:#991b1b;
-      padding:1rem;
-      border-radius:6px;
-    }
-    .emergency .badge{
-      display:inline-block;
-      background:#991b1b;
-      color:#fff;
-      padding:.25rem .5rem;
-      border-radius:4px;
-      font-size:.875rem;
-      margin-left:.5rem;
-    }
-    footer{
-      background:var(--surface);
-      text-align:center;
-      padding:1.5rem;
-      font-size:.875rem;
-      border-top:1px solid #e2e8f0;
-    }
-    footer a{
-      margin:0 .5rem;
-    }
-    @media (max-width:768px){
-      .hero h1{font-size:2rem;}
-      nav{flex-direction:column;gap:.5rem;}
-    }
-    @media (max-width:375px){
-      .hero{padding:2rem 0.5rem;}
-      .btn{width:100%;}
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Reliable AC repair and installation in Austin, TX. Same-day service, free estimates.">
+<title>A-Plus Air Conditioning – Same-Day Service You Can Trust</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #ffffff;
+  --surface: #f8fafc;
+  --accent: #2563eb;
+  --text: #1e293b;
+  --font: 'Inter', system-ui, sans-serif;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+a.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--accent);
+  color: #000;
+  padding: 8px;
+  z-index: 10000;
+  text-decoration: none;
+  font-weight: 600;
+}
+a.skip-link:focus { top: 0; }
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(20,20,20,0.92);
+  backdrop-filter: blur(12px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.logo {
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: -0.02em;
+}
+nav a {
+  color: var(--text);
+  text-decoration: none;
+  margin-left: 2rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+nav a:hover { color: var(--accent); }
+.phone-cta {
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.phone-cta:hover {
+  background: var(--accent);
+  color: #000;
+}
+
+main { width: 100%; }
+
+.hero {
+  position: relative;
+  min-height: clamp(500px, 90vh, 800px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 6rem 2rem 4rem;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(255,255,255,0.03) 0%, transparent 60%),
+    linear-gradient(180deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.8) 100%),
+    url('https://images.unsplash.com/photo-1585771724684-38269d6639fd?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.3), rgba(0,0,0,0.7));
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  animation: fadeInUp 0.8s ease-out;
+}
+.hero h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+.hero p {
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  opacity: 0.85;
+  margin-bottom: 2.5rem;
+}
+.cta-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.btn-primary {
+  background: var(--accent);
+  color: #000;
+  padding: 1rem 2rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+.btn-secondary {
+  background: transparent;
+  color: var(--accent);
+  border: 2px solid var(--accent);
+  padding: 1rem 2rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.2s;
+}
+.btn-secondary:hover {
+  background: var(--accent);
+  color: #000;
+}
+
+section {
+  padding: clamp(3rem, 6vw, 5rem) clamp(1rem, 4vw, 2rem);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.section-title {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.stats-bar {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.stat {
+  text-align: center;
+  padding: 1rem;
+}
+.stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+.stat-label {
+  font-size: 0.9rem;
+  opacity: 0.7;
+  margin-top: 0.3rem;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+.service-card {
+  background: var(--surface);
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.05);
+  transition: transform 0.2s, border-color 0.2s;
+}
+.service-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+}
+.service-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.service-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+}
+.service-card p {
+  opacity: 0.8;
+  font-size: 0.95rem;
+}
+
+.highlights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+.highlight {
+  text-align: center;
+  padding: 1.5rem;
+}
+.highlight-icon {
+  font-size: 2rem;
+  margin-bottom: 0.8rem;
+}
+.highlight h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
+}
+.highlight p {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.why-us {
+  background: var(--surface);
+  border-radius: 16px;
+  padding: 3rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+.why-item {
+  text-align: center;
+}
+.why-item .icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.why-item h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--accent);
+}
+.why-item p {
+  opacity: 0.85;
+}
+
+.contact-section {
+  background: var(--surface);
+  border-radius: 16px;
+  padding: 3rem 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.contact-form input,
+.contact-form textarea {
+  padding: 1rem;
+  background: rgba(0,0,0,0.2);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px;
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+.contact-form button[type="submit"] {
+  background: var(--accent);
+  color: #000;
+  padding: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: transform 0.2s;
+}
+.contact-form button[type="submit"]:hover {
+  transform: translateY(-2px);
+}
+
+.emergency-cta {
+  background: linear-gradient(135deg, var(--accent) 0%, color-mix(in srgb, var(--accent) 80%, #000) 100%);
+  color: #000;
+  text-align: center;
+  padding: 3rem 2rem;
+  border-radius: 16px;
+  margin: 2rem auto;
+  max-width: 1200px;
+}
+.emergency-cta h2 {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  margin-bottom: 1rem;
+}
+.emergency-cta a {
+  color: #000;
+  font-weight: 700;
+  text-decoration: underline;
+  font-size: 1.2rem;
+}
+
+footer {
+  padding: 2rem;
+  text-align: center;
+  opacity: 0.7;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+footer a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  header { flex-direction: column; gap: 1rem; padding: 1rem; }
+  nav { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
+  nav a { margin: 0; }
+  .hero { padding: 5rem 1rem 3rem; }
+  .stats-bar { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 480px) {
+  .stats-bar { grid-template-columns: 1fr; }
+  .services-grid { grid-template-columns: 1fr; }
+}
+</style>
 </head>
 <body>
-  <a href="#main-content" class="skip-link">Skip to content</a>
+<a href="#main" class="skip-link">Skip to main content</a>
 
-  <nav aria-label="Primary navigation">
-    <a href="#hero">Home</a>
+<header role="banner">
+  <div class="logo" aria-label="A-Plus Air Conditioning">A-Plus Air Conditioning</div>
+  <nav role="navigation" aria-label="Main navigation">
+    <a href="#home">Home</a>
     <a href="#services">Services</a>
     <a href="#about">About</a>
     <a href="#contact">Contact</a>
   </nav>
+  <a href="tel:(512) 456-7890" class="phone-cta" aria-label="Call (512) 456-7890">(512) 456-7890</a>
+</header>
 
-  <header>
-    <a href="tel:(512) 456-7890" class="phone">Call Us: (512) 456‑7890</a>
-  </header>
-
-  <main id="main-content">
-    <!-- Hero Section -->
-    <section id="hero" class="hero">
-      <h1>Same‑Day Service You Can Trust</h1>
-      <p>Fast, reliable HVAC repair, installation, and maintenance for Austin homes and businesses.</p>
-      <a href="tel:(512) 456-7890" class="btn">Call (512) 456‑7890</a>
-    </section>
-
-    <!-- Trust Bar -->
-    <section class="trust" aria-label="Trust and certifications">
-      <div>
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.957a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.367 2.45a1 1 0 00-.364 1.118l1.287 3.957c.3.921-.755 1.688-1.54 1.118l-3.367-2.45a1 1 0 00-1.175 0l-3.367 2.45c-.784.57-1.838-.197-1.539-1.118l1.286-3.957a1 1 0 00-.364-1.118L2.07 9.384c-.783-.57-.38-1.81.588-1.81h4.162a1 1 0 00.95-.69l1.286-3.957z"/></svg>
-        <span>4.9 ★ (350+ reviews)</span>
+<main id="main">
+  <section id="home" class="hero" aria-labelledby="hero-title">
+    <div class="hero-content">
+      <h1 id="hero-title">Same-Day Service You Can Trust</h1>
+      <p>Trusted by 350+ local homeowners. Licensed technicians, upfront pricing, and honest work.</p>
+      <div class="cta-group">
+        <a href="#contact" class="btn-primary" role="button">Schedule Service</a>
+        <a href="tel:(512) 456-7890" class="btn-secondary">Call Now</a>
       </div>
-      <div>
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path d="M10 0L0 5v6c0 5.523 3.806 10.74 9.5 12 5.694-1.26 9.5-6.477 9.5-12V5L10 0z"/></svg>
-        <span>NATE Certified Technicians</span>
-      </div>
-      <div>
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path d="M2 4a2 2 0 012-2h12a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V4zm2 .5v11h12v-11H4z"/></svg>
-        <span>Licensed TX HVAC Contractor</span>
-      </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Services Grid -->
-    <section id="services" class="services" aria-label="Our services">
-      <div class="service-card">
+  <section aria-label="Trust indicators">
+    <div class="stats-bar">
+      <div class="stat">
+        <div class="stat-value">4.9 ★</div>
+        <div class="stat-label">350+ Google Reviews</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value">8+</div>
+        <div class="stat-label">Years Experience</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value">NATE</div>
+        <div class="stat-label">Certified Team</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value">Licensed</div>
+        <div class="stat-label">Licensed & Insured</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" aria-labelledby="services-title">
+    <h2 id="services-title" class="section-title">Our Services</h2>
+    <div class="services-grid">
+      <article class="service-card">
+        <div class="service-icon" aria-hidden="true">🔧</div>
         <h3>AC Repair</h3>
-        <p>Quick diagnostics and same‑day repairs to keep your home cool.</p>
-      </div>
-      <div class="service-card">
+        <p>Professional AC Repair services by certified technicians. Fast, reliable, and guaranteed.</p>
+      </article>
+      <article class="service-card">
+        <div class="service-icon" aria-hidden="true">❄️</div>
         <h3>AC Installation</h3>
-        <p>Energy‑efficient units installed by certified professionals.</p>
-      </div>
-      <div class="service-card">
+        <p>Expert AC Installation for homes and businesses. Quality workmanship you can count on.</p>
+      </article>
+      <article class="service-card">
+        <div class="service-icon" aria-hidden="true">🔥</div>
         <h3>Heating Repair</h3>
-        <p>Fast furnace fixes to ensure warmth throughout the winter.</p>
-      </div>
-      <div class="service-card">
+        <p>Comprehensive Heating Repair solutions. Keeping your home comfortable year-round.</p>
+      </article>
+      <article class="service-card">
+        <div class="service-icon" aria-hidden="true">🛡️</div>
         <h3>Maintenance Plans</h3>
-        <p>Year‑round service agreements that extend equipment life.</p>
+        <p>Proactive Maintenance Plans plans to prevent breakdowns and extend system life.</p>
+      </article>
+    </div>
+  </section>
+
+  <section aria-labelledby="why-title">
+    <h2 id="why-title" class="section-title">Why Choose A-Plus Air Conditioning</h2>
+    <div class="highlights">
+      <div class="highlight">
+        <div class="highlight-icon" aria-hidden="true">✅</div>
+        <h4>Same-Day Service</h4>
+        <p>We deliver on our promises every time.</p>
       </div>
-    </section>
+      <div class="highlight">
+        <div class="highlight-icon" aria-hidden="true">💰</div>
+        <h4>Free Estimates</h4>
+        <p>Transparent pricing with no surprises.</p>
+      </div>
+      <div class="highlight">
+        <div class="highlight-icon" aria-hidden="true">⚡</div>
+        <h4>Licensed Technicians</h4>
+        <p>Fast response times when you need us most.</p>
+      </div>
+      <div class="highlight">
+        <div class="highlight-icon" aria-hidden="true">🏆</div>
+        <h4>Upfront Pricing</h4>
+        <p>Industry-leading expertise and certification.</p>
+      </div>
+    </div>
+  </section>
 
-    <!-- Highlights -->
-    <section class="highlights" aria-label="Why choose A‑Plus">
-      <div class="highlight">Same‑Day Service</div>
-      <div class="highlight">Free Estimates</div>
-      <div class="highlight">Licensed Technicians</div>
-      <div class="highlight">Upfront Pricing</div>
-    </section>
-
-    <!-- Why Choose Us -->
-    <section id="about" class="why" aria-label="Reasons to trust us">
+  <section aria-labelledby="about-title">
+    <h2 id="about-title" class="section-title">About A-Plus Air Conditioning</h2>
+    <div class="why-us">
       <div class="why-item">
-        <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.26 3.41 9.71 8.19 11.34.6.11.82-.26.82-.58 0-.29-.01-1.04-.02-2.04-3.34.73-4.04-1.61-4.04-1.61-.55-1.4-1.34-1.77-1.34-1.77-1.09-.75.08-.73.08-.73 1.2.09 1.84 1.23 1.84 1.23 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.66-.3-5.46-1.33-5.46-5.92 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.16 0 0 1.01-.32 3.31 1.23a11.5 11.5 0 016.02 0c2.3-1.55 3.31-1.23 3.31-1.23.66 1.64.24 2.86.12 3.16.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.61-5.48 5.9.43.37.81 1.1.81 2.22 0 1.6-.01 2.89-.01 3.28 0 .32.22.7.83.58C20.59 21.71 24 17.26 24 12c0-6.63-5.37-12-12-12z"/></svg>
-        <p>Locally owned and operated since 2005, we know Austin homes.</p>
+        <div class="icon" aria-hidden="true">👨‍🔧</div>
+        <h4>Expert Technicians</h4>
+        <p>Our team is fully licensed, NATE-certified, and trained on the latest HVAC systems.</p>
       </div>
       <div class="why-item">
-        <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-3.16 19.44c.5.09.68-.22.68-.48v-1.73c-2.78.6-3.37-1.34-3.37-1.34-.45-1.14-1.1-1.44-1.1-1.44-.9-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.26.1-2.63 0 0 .84-.27 2.75 1.02A9.57 9.57 0 0112 6.8c.85.004 1.71.115 2.51.337 1.9-1.29 2.74-1.02 2.74-1.02.55 1.37.2 2.38.1 2.63.64.7 1.03 1.6 1.03 2.69 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.86v2.76c0 .27.18.58.69.48A10 10 0 0012 2z"/></svg>
-        <p>All technicians are NATE‑certified and fully licensed in Texas.</p>
+        <div class="icon" aria-hidden="true">🤝</div>
+        <h4>Trusted Service</h4>
+        <p>4.9 star rating from 350+ verified reviews. Our customers recommend us.</p>
       </div>
       <div class="why-item">
-        <svg viewBox="0 0 24 24"><path d="M5 3a2 2 0 00-2 2v14l4-4h9a2 2 0 002-2V5a2 2 0 00-2-2H5z"/></svg>
-        <p>Transparent, upfront pricing—no hidden fees.</p>
+        <div class="icon" aria-hidden="true">🔒</div>
+        <h4>Guaranteed Work</h4>
+        <p>Every job comes with our satisfaction guarantee and warranty protection.</p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Emergency CTA -->
-    <section class="emergency" aria-label="Emergency service">
-      <p>Need emergency service? <a href="tel:(512) 456-7890">Call now</a> <span class="badge">24/7</span></p>
-    </section>
+  <section id="contact" aria-labelledby="contact-title">
+    <h2 id="contact-title" class="section-title">Contact Us</h2>
+    <div class="contact-section">
+      <form class="contact-form" action="mailto:info@aplusac.com" method="post" enctype="text/plain">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" name="phone">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      <p style="text-align: center; margin-top: 1.5rem; opacity: 0.8;">
+        Or call us directly at <a href="tel:(512) 456-7890" style="color: var(--accent);">(512) 456-7890</a>
+      </p>
+    </div>
+  </section>
 
-    <!-- Contact Form -->
-    <section id="contact" class="contact" aria-label="Contact us">
-      <h2>Get Your Free Estimate</h2>
-      <form id="contactForm">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Email Address" required>
-        <input type="tel" name="phone" placeholder="Phone Number" required>
-        <textarea name="message" rows="4"
+  <section aria-label="Call to action">
+    <div class="emergency-cta">
+      <h2>Emergency Service Available</h2>
+      <p style="margin-bottom: 1.5rem; opacity: 0.9;">Call now for immediate assistance</p>
+      <a href="tel:(512) 456-7890" class="btn-primary">(512) 456-7890</a>
+    </div>
+  </section>
+</main>
+
+<footer role="contentinfo">
+  <p>© 2026 A-Plus Air Conditioning. Serving Austin, TX and surrounding areas.</p>
+  <p style="margin-top: 0.5rem;">
+    <a href="mailto:info@aplusac.com">info@aplusac.com</a> |
+    <a href="#privacy">Privacy Policy</a>
+  </p>
+</footer>
+</body>
+</html>
