@@ -1,168 +1,311 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>A-Plus Air Conditioning – Austin HVAC Experts</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<style>
-:root{
-  --bg:#ffffff;
-  --surface:#f8fafc;
-  --text:#1e293b;
-  --accent:#2563eb;
-  --font-stack: Inter, "Segoe UI", system-ui, sans-serif;
-}
-*{margin:0;padding:0;box-sizing:border-box;}
-html{font-size:100%;scroll-behavior:smooth;background:var(--bg);color:var(--text);font-family:var(--font-stack);}
-body{line-height:1.5;}
-a{color:var(--accent);text-decoration:none;}
-a:hover{text-decoration:underline;}
-button{cursor:pointer;border:none;background:var(--accent);color:#fff;padding:.75rem 1.5rem;border-radius:4px;font-size:1rem;}
-button:hover{background:#1e4bb8;}
-header{position:sticky;top:0;z-index:1000;background:#fff;border-bottom:1px solid #e2e8f0;display:flex;justify-content:space-between;align-items:center;padding:0.75rem 1.5rem;}
-.logo{font-size:1.5rem;font-weight:700;color:var(--accent);}
-nav a{margin-left:1.5rem;font-weight:500;}
-.hero{background:var(--surface);padding:4rem 1.5rem;text-align:center;}
-.hero h1{font-size:3.5rem;font-weight:700;margin-bottom:.5rem;}
-.hero p{font-size:1.125rem;margin-bottom:2rem;max-width:600px;margin-left:auto;margin-right:auto;}
-.cta-group{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;}
-.cta-primary{background:var(--accent);color:#fff;}
-.cta-secondary{background:transparent;color:var(--accent);border:2px solid var(--accent);}
-.trust{background:#fff;padding:1rem 0;text-align:center;font-size:1rem;border-top:1px solid #e2e8f0;border-bottom:1px solid #e2e8f0;}
-.trust .rating{display:inline-flex;align-items:center;margin-right:2rem;}
-.trust .rating svg{fill:#fbbf24;width:1.25rem;height:1.25rem;margin-right:.25rem;}
-.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;padding:3rem 1.5rem;background:#fff;}
-.service-card{background:var(--surface);padding:1.5rem;border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,0.1);}
-.service-card h3{font-size:1.25rem;margin-bottom:.5rem;}
-.highlights{display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;padding:3rem 1.5rem;background:#fff;}
-.highlight{background:var(--surface);flex:1 1 200px;padding:1rem;border-radius:8px;text-align:center;}
-.highlight svg{fill:var(--accent);width:2rem;height:2rem;margin-bottom:.5rem;}
-.why{background:#fff;padding:3rem 1.5rem;max-width:1200px;margin:auto;}
-.why h2{font-size:2rem;margin-bottom:1rem;text-align:center;}
-.bullets{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem;margin-top:2rem;}
-.bullet{display:flex;align-items:flex-start;gap:.75rem;}
-.bullet svg{flex-shrink:0;width:1.5rem;height:1.5rem;fill:var(--accent);}
-.bullet p{margin:0;}
-.cta-section{background:var(--accent);color:#fff;padding:3rem 1.5rem;text-align:center;}
-.cta-section h2{font-size:2rem;margin-bottom:1rem;}
-.cta-section .phone{font-size:1.5rem;font-weight:700;}
-.emergency{background:#fff;color:var(--accent);display:inline-block;padding:.25rem .75rem;border-radius:4px;font-weight:600;margin-top:.5rem;}
-footer{background:#f1f5f9;padding:2rem 1.5rem;font-size:.875rem;text-align:center;color:#64748b;}
-footer a{color:#64748b;}
-@media (max-width:768px){
-  .hero h1{font-size:2.5rem;}
-}
-@media (max-width:480px){
-  .hero h1{font-size:2rem;}
-}
-.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px overflow:hidden clip:rect(0,0,0,0);border:0;}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A‑Plus Air Conditioning provides fast, reliable HVAC repair, installation, and maintenance in Austin, TX. Same‑day service, licensed technicians, and upfront pricing. Call (512) 456‑7890.">
+  <title>A‑Plus Air Conditioning – Austin TX HVAC Services</title>
+  <style>
+    :root{
+      --bg:#ffffff;
+      --surface:#f8fafc;
+      --text:#1e293b;
+      --accent:#2563eb;
+    }
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{
+      font-family:system-ui,Arial,sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.5;
+    }
+    a{color:var(--accent);text-decoration:none;}
+    a:hover{text-decoration:underline;}
+    .skip-link{
+      position:absolute;
+      left:-999px;
+      top:0;
+      background:#000;
+      color:#fff;
+      padding:8px 12px;
+      z-index:100;
+    }
+    .skip-link:focus{
+      left:10px;
+    }
+    nav{
+      display:flex;
+      justify-content:center;
+      gap:2rem;
+      background:var(--surface);
+      padding:1rem;
+      position:sticky;
+      top:0;
+      z-index:10;
+      box-shadow:0 2px 4px rgba(0,0,0,0.05);
+    }
+    nav a{
+      font-weight:600;
+    }
+    header{
+      background:var(--surface);
+      padding:0.5rem 1rem;
+      text-align:center;
+      position:sticky;
+      top:0;
+      z-index:9;
+      border-bottom:1px solid #e2e8f0;
+    }
+    header .phone{
+      font-size:1.1rem;
+      font-weight:600;
+    }
+    main{
+      max-width:1200px;
+      margin:auto;
+      padding:1rem;
+    }
+    section{
+      margin:3rem 0;
+    }
+    .hero{
+      text-align:center;
+      padding:4rem 1rem;
+      background:var(--surface);
+    }
+    .hero h1{
+      font-size:2.5rem;
+      margin-bottom:.5rem;
+    }
+    .hero p{
+      font-size:1.125rem;
+      margin-bottom:1.5rem;
+      color:#475569;
+    }
+    .btn{
+      display:inline-block;
+      background:var(--accent);
+      color:#fff;
+      padding:.75rem 1.5rem;
+      border:none;
+      border-radius:4px;
+      font-size:1rem;
+      cursor:pointer;
+      transition:background .3s,transform .2s;
+    }
+    .btn:hover{
+      background:#1d4ed8;
+      transform:scale(1.03);
+    }
+    .trust{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:2rem;
+      text-align:center;
+      font-size:1rem;
+    }
+    .trust div{
+      display:flex;
+      align-items:center;
+      gap:.5rem;
+    }
+    .services{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:1.5rem;
+    }
+    .service-card{
+      background:var(--surface);
+      padding:1.5rem;
+      border-radius:8px;
+      text-align:center;
+      transition:transform .3s,box-shadow .3s;
+    }
+    .service-card:hover{
+      transform:translateY(-4px);
+      box-shadow:0 8px 16px rgba(0,0,0,0.1);
+    }
+    .highlights{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+      gap:1rem;
+      text-align:center;
+    }
+    .highlight{
+      background:var(--surface);
+      padding:1rem;
+      border-radius:6px;
+    }
+    .why{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:1.5rem;
+    }
+    .why-item{
+      display:flex;
+      align-items:flex-start;
+      gap:.75rem;
+    }
+    .why-item svg{
+      flex-shrink:0;
+      width:24px;
+      height:24px;
+      fill:var(--accent);
+    }
+    .contact{
+      background:var(--surface);
+      padding:2rem;
+      border-radius:8px;
+    }
+    .contact h2{
+      margin-bottom:1rem;
+      text-align:center;
+    }
+    .contact form{
+      display:grid;
+      gap:1rem;
+    }
+    .contact input,
+    .contact textarea{
+      width:100%;
+      padding:.75rem;
+      border:1px solid #cbd5e1;
+      border-radius:4px;
+      font-size:1rem;
+    }
+    .contact button{
+      width:max-content;
+      margin:auto;
+    }
+    .emergency{
+      text-align:center;
+      background:#fee2e2;
+      color:#991b1b;
+      padding:1rem;
+      border-radius:6px;
+    }
+    .emergency .badge{
+      display:inline-block;
+      background:#991b1b;
+      color:#fff;
+      padding:.25rem .5rem;
+      border-radius:4px;
+      font-size:.875rem;
+      margin-left:.5rem;
+    }
+    footer{
+      background:var(--surface);
+      text-align:center;
+      padding:1.5rem;
+      font-size:.875rem;
+      border-top:1px solid #e2e8f0;
+    }
+    footer a{
+      margin:0 .5rem;
+    }
+    @media (max-width:768px){
+      .hero h1{font-size:2rem;}
+      nav{flex-direction:column;gap:.5rem;}
+    }
+    @media (max-width:375px){
+      .hero{padding:2rem 0.5rem;}
+      .btn{width:100%;}
+    }
+  </style>
 </head>
 <body>
-<a href="#main-content" class="sr-only">Skip to main content</a>
-<header>
-  <div class="logo" aria-label="A-Plus Air Conditioning">A-Plus Air Conditioning</div>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
   <nav aria-label="Primary navigation">
-    <a href="tel:+15124567890">(512) 456-7890</a>
+    <a href="#hero">Home</a>
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
   </nav>
-</header>
 
-<main id="main-content">
-  <section class="hero" aria-label="Hero">
-    <h1>Same-Day Service You Can Trust</h1>
-    <p>Reliable HVAC repair, installation, and maintenance for Austin homes and businesses. Our certified technicians deliver fast, friendly service every time.</p>
-    <div class="cta-group">
-      <button class="cta-primary" onclick="document.getElementById('schedule-form').scrollIntoView({behavior:'smooth'});">Schedule Service</button>
-      <a href="tel:+15124567890" class="cta-secondary">Call Now</a>
-    </div>
-  </section>
+  <header>
+    <a href="tel:(512) 456-7890" class="phone">Call Us: (512) 456‑7890</a>
+  </header>
 
-  <section class="trust" aria-label="Trust and Certifications">
-    <div class="rating" aria-label="4.9 out of 5 stars rating">
-      <svg viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L0 6.91l6.561-0.954L10 0l3.439 5.956L20 6.91l-5.245 4.635 1.123 6.545z"/></svg>
-      <svg viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L0 6.91l6.561-0.954L10 0l3.439 5.956L20 6.91l-5.245 4.635 1.123 6.545z"/></svg>
-      <svg viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L0 6.91l6.561-0.954L10 0l3.439 5.956L20 6.91l-5.245 4.635 1.123 6.545z"/></svg>
-      <svg viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L0 6.91l6.561-0.954L10 0l3.439 5.956L20 6.91l-5.245 4.635 1.123 6.545z"/></svg>
-      <svg viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L0 6.91l6.561-0.954L10 0l3.439 5.956L20 6.91l-5.245 4.635 1.123 6.545z"/></svg>
-    </div>
-    <span>4.9 ★ (350+ reviews)</span>
-    <span style="margin-left:1rem;">| NATE Certified</span>
-    <span style="margin-left:1rem;">| Licensed TX HVAC</span>
-  </section>
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+      <h1>Same‑Day Service You Can Trust</h1>
+      <p>Fast, reliable HVAC repair, installation, and maintenance for Austin homes and businesses.</p>
+      <a href="tel:(512) 456-7890" class="btn">Call (512) 456‑7890</a>
+    </section>
 
-  <section class="services" aria-label="Our Services">
-    <div class="service-card">
-      <h3>AC Repair</h3>
-      <p>Fast diagnosis and repair of all major air‑conditioning brands.</p>
-    </div>
-    <div class="service-card">
-      <h3>AC Installation</h3>
-      <p>Energy‑efficient installations with professional sizing and permitting.</p>
-    </div>
-    <div class="service-card">
-      <h3>Heating Repair</h3>
-      <p>Reliable furnace and heat‑pump repairs to keep you warm all winter.</p>
-    </div>
-    <div class="service-card">
-      <h3>Maintenance</h3>
-      <p>Seasonal tune‑ups that extend equipment life and improve efficiency.</p>
-    </div>
-  </section>
-
-  <section class="highlights" aria-label="Key Benefits">
-    <div class="highlight">
-      <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0110 10c0 5.5-4.5 10-10 10S2 17.5 2 12A10 10 0 0112 2zM11 16l6-6-1.4-1.4L11 13.2l-2.6-2.6L7 12l4 4z"/></svg>
-      <p>Same‑Day Service</p>
-    </div>
-    <div class="highlight">
-      <svg viewBox="0 0 24 24"><path d="M12 2a9 9 0 019 9c0 4.5-3.5 8.2-8 8.9V22h-2v-2.1c-4.5-.7-8-4.4-8-8.9a9 9 0 019-9z"/></svg>
-      <p>Free Estimates</p>
-    </div>
-    <div class="highlight">
-      <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4-1.5-1.5L11 11l-1.5-1.5zM12 2a10 10 0 100 20 10 10 0 000-20z"/></svg>
-      <p>Licensed Technicians</p>
-    </div>
-    <div class="highlight">
-      <svg viewBox="0 0 24 24"><path d="M12 1l3 7h7l-5.5 4 2 7L12 15l-6.5 4 2-7L2 8h7z"/></svg>
-      <p>Upfront Pricing</p>
-    </div>
-  </section>
-
-  <section class="why" aria-labelledby="why-choose-us">
-    <h2 id="why-choose-us">Why Choose A‑Plus Air Conditioning</h2>
-    <div class="bullets">
-      <div class="bullet">
-        <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4-1.4-1.4L11 13.2l-2.6-2.6L7 12l4 4z"/></svg>
-        <p>Transparent quotes with no hidden fees.</p>
+    <!-- Trust Bar -->
+    <section class="trust" aria-label="Trust and certifications">
+      <div>
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.957a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.367 2.45a1 1 0 00-.364 1.118l1.287 3.957c.3.921-.755 1.688-1.54 1.118l-3.367-2.45a1 1 0 00-1.175 0l-3.367 2.45c-.784.57-1.838-.197-1.539-1.118l1.286-3.957a1 1 0 00-.364-1.118L2.07 9.384c-.783-.57-.38-1.81.588-1.81h4.162a1 1 0 00.95-.69l1.286-3.957z"/></svg>
+        <span>4.9 ★ (350+ reviews)</span>
       </div>
-      <div class="bullet">
-        <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0110 10c0 5.5-4.5 10-10 10S2 17.5 2 12A10 10 0 0112 2zM11 16l6-6-1.4-1.4L11 13.2l-2.6-2.6L7 12l4 4z"/></svg>
-        <p>24/7 emergency service for urgent repairs.</p>
+      <div>
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path d="M10 0L0 5v6c0 5.523 3.806 10.74 9.5 12 5.694-1.26 9.5-6.477 9.5-12V5L10 0z"/></svg>
+        <span>NATE Certified Technicians</span>
       </div>
-      <div class="bullet">
-        <svg viewBox="0 0 24 24"><path d="M5 3v4h14V3h2v18h-2v-4H5v4H3V3h2zm2 6h10v2H7V9zm0 4h10v2H7v-2z"/></svg>
-        <p>Energy‑saving solutions that lower your bills.</p>
+      <div>
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path d="M2 4a2 2 0 012-2h12a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V4zm2 .5v11h12v-11H4z"/></svg>
+        <span>Licensed TX HVAC Contractor</span>
       </div>
-      <div class="bullet">
-        <svg viewBox="0 0 24 24"><path d="M12 1l3 7h7l-5.5 4 2 7L12 15l-6.5 4 2-7L2 8h7z"/></svg>
-        <p>Fully insured, NATE‑certified technicians.</p>
+    </section>
+
+    <!-- Services Grid -->
+    <section id="services" class="services" aria-label="Our services">
+      <div class="service-card">
+        <h3>AC Repair</h3>
+        <p>Quick diagnostics and same‑day repairs to keep your home cool.</p>
       </div>
-    </div>
-  </section>
+      <div class="service-card">
+        <h3>AC Installation</h3>
+        <p>Energy‑efficient units installed by certified professionals.</p>
+      </div>
+      <div class="service-card">
+        <h3>Heating Repair</h3>
+        <p>Fast furnace fixes to ensure warmth throughout the winter.</p>
+      </div>
+      <div class="service-card">
+        <h3>Maintenance Plans</h3>
+        <p>Year‑round service agreements that extend equipment life.</p>
+      </div>
+    </section>
 
-  <section class="cta-section" aria-label="Schedule Service">
-    <h2>Ready for Reliable Comfort?</h2>
-    <p class="phone"><a href="tel:+15124567890" style="color:#fff;">(512) 456-7890</a></p>
-    <div class="emergency">Emergency Service Available</div>
-  </section>
-</main>
+    <!-- Highlights -->
+    <section class="highlights" aria-label="Why choose A‑Plus">
+      <div class="highlight">Same‑Day Service</div>
+      <div class="highlight">Free Estimates</div>
+      <div class="highlight">Licensed Technicians</div>
+      <div class="highlight">Upfront Pricing</div>
+    </section>
 
-<footer aria-label="Footer">
-  <p>&copy; 2026 A-Plus Air Conditioning. All rights reserved.</p>
-  <p>1234 Austin St., Austin, TX 78701 | <a href="mailto:info@aplusac.com">info@aplusac.com</a></p>
-  <p><a href="#">Privacy Policy</a></p>
-</footer>
+    <!-- Why Choose Us -->
+    <section id="about" class="why" aria-label="Reasons to trust us">
+      <div class="why-item">
+        <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.26 3.41 9.71 8.19 11.34.6.11.82-.26.82-.58 0-.29-.01-1.04-.02-2.04-3.34.73-4.04-1.61-4.04-1.61-.55-1.4-1.34-1.77-1.34-1.77-1.09-.75.08-.73.08-.73 1.2.09 1.84 1.23 1.84 1.23 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.66-.3-5.46-1.33-5.46-5.92 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.16 0 0 1.01-.32 3.31 1.23a11.5 11.5 0 016.02 0c2.3-1.55 3.31-1.23 3.31-1.23.66 1.64.24 2.86.12 3.16.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.61-5.48 5.9.43.37.81 1.1.81 2.22 0 1.6-.01 2.89-.01 3.28 0 .32.22.7.83.58C20.59 21.71 24 17.26 24 12c0-6.63-5.37-12-12-12z"/></svg>
+        <p>Locally owned and operated since 2005, we know Austin homes.</p>
+      </div>
+      <div class="why-item">
+        <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-3.16 19.44c.5.09.68-.22.68-.48v-1.73c-2.78.6-3.37-1.34-3.37-1.34-.45-1.14-1.1-1.44-1.1-1.44-.9-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.26.1-2.63 0 0 .84-.27 2.75 1.02A9.57 9.57 0 0112 6.8c.85.004 1.71.115 2.51.337 1.9-1.29 2.74-1.02 2.74-1.02.55 1.37.2 2.38.1 2.63.64.7 1.03 1.6 1.03 2.69 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.86v2.76c0 .27.18.58.69.48A10 10 0 0012 2z"/></svg>
+        <p>All technicians are NATE‑certified and fully licensed in Texas.</p>
+      </div>
+      <div class="why-item">
+        <svg viewBox="0 0 24 24"><path d="M5 3a2 2 0 00-2 2v14l4-4h9a2 2 0 002-2V5a2 2 0 00-2-2H5z"/></svg>
+        <p>Transparent, upfront pricing—no hidden fees.</p>
+      </div>
+    </section>
 
-</body>
-</html>
+    <!-- Emergency CTA -->
+    <section class="emergency" aria-label="Emergency service">
+      <p>Need emergency service? <a href="tel:(512) 456-7890">Call now</a> <span class="badge">24/7</span></p>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact" class="contact" aria-label="Contact us">
+      <h2>Get Your Free Estimate</h2>
+      <form id="contactForm">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+        <input type="tel" name="phone" placeholder="Phone Number" required>
+        <textarea name="message" rows="4"
